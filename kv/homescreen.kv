@@ -1,0 +1,86 @@
+#:import utils kivy.utils
+
+<HomeScreen>:  #this name comes from the class name in main.py
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex ("#5f788a")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            # Top banner
+            pos_hint: {"top": 1, "left": 1}
+            size_hint: 1, .1
+            text: "OnTheFlys" 
+			font_size: 50
+            color: 51,51,51
+            id: banner_name 
+
+        Label:
+            # Top banner
+            pos_hint: {"top": .9, "left": 1}
+            size_hint: 1, .2
+            text: "Muir Lake"  
+			font_size: 30
+            id: lake_name 
+
+        Label:
+            # Top banner
+            pos_hint: {"top": .7, "left": 1}
+            size_hint: 1, .2
+            text: "Aug 29, 2023 at 3:30pm"  
+			font_size: 30
+            id: datetime_banner 
+
+        Label:
+            # Top banner
+            pos_hint: {"top": .5, "left": 1}
+            size_hint: 1, .2
+            text: "GPS Coordinates" 
+			font_size: 30
+            id: gps_oordinates 
+
+        GridLayout:
+            # Depth and temp
+            rows: 1
+            pos_hint: {"top": .3, "left": 1}
+            size_hint: 1, .1  
+            Image:
+                source: "icons/topo.png"
+                size_hint_x: 1
+                allow_stretch: True
+            Image:
+                source: "icons/Thermometer-small.png"
+                size_hint_x: 1
+                allow_stretch: True 
+
+        GridLayout:
+            #fly and fish log 
+            rows: 1
+            pos_hint: {"top": .2, "left": 1}
+            size_hint: 1, .1   
+            Image:
+                source: "icons/Parachute.png"
+                size_hint_x: 0.5
+                allow_stretch: True
+
+            Image:
+                source: "icons/tiger-trout.png"
+                size_hint_x: 0.5
+                allow_stretch: True
+
+        GridLayout:
+            #Weather and hatch
+            rows: 1
+            pos_hint: {"top": .1, "left": 1}
+            size_hint: 1, .1
+            Image:
+                source: "icons/sun-cloud-icon.png"
+                size_hint_x: 0.5
+                allow_stretch: True
+            Image:
+                source: "icons/damselfly_nymph.png"
+                size_hint_x: 0.5
+                allow_stretch: True
+
